@@ -22,6 +22,7 @@ import ui.MainActivity
 
 class PictureOfTheDayFragment : Fragment() {
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+
     private val viewModel: PictureOfTheDayViewModel by lazy {
         ViewModelProviders.of(this).get(PictureOfTheDayViewModel::class.java)
     }
