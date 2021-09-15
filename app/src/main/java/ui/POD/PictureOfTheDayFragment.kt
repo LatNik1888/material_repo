@@ -75,22 +75,16 @@ class PictureOfTheDayFragment : Fragment() {
                 val serverResponseData = data.serverResponseData
                 val url = serverResponseData.url
                 if (url.isNullOrEmpty()) {
-                    //showError("Сообщение, что ссылка пустая")
                     toast("Link is empty")
-                } else {
-                    //showSuccess()
-                    image_view.load(url) {
-                        lifecycle(this@PictureOfTheDayFragment)
-                        error(R.drawable.ic_load_error_vector)
-                        placeholder(R.drawable.ic_no_photo_vector)
-                    }
+                } else image_view.load(url) {
+                    lifecycle(this@PictureOfTheDayFragment)
+                    error(R.drawable.ic_load_error_vector)
+                    placeholder(R.drawable.ic_no_photo_vector)
                 }
             }
             is PictureOfTheDayData.Loading -> {
-                //showLoading()
             }
             is PictureOfTheDayData.Error -> {
-                //showError(data.error.message)
                 toast(data.error.message)
             }
         }
