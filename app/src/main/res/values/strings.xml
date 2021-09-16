@@ -1,3 +1,52 @@
 <resources>
-    <string name="app_name">material_kt</string>
+    <string name="app_name">Material</string>
+    <string name="photo_of_the_day_stub">Photo of the day</string>
+    <string name="search_wiki">Найти в Википедии</string>
+    <string name="wiki_helper_text">Поищите термин в википедии</string>
+    <string name="favourite">favourite</string>
+    <string name="settings">settings</string>
+    <string name="search">Search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chip_default">Default</string>
+    <string name="hip_choice">Choice</string>
+    <string name="chip_text">Action</string>
+    <string name="chip_filter">Filter</string>
+    <string name="chip_bckg_color">Background Color</string>
+    <string name="chip_ripple_color">Ripple Color</string>
+    <string name="chip_icon">Chip icon</string>
+    <string name="chip_chip2">Chip</string>
+    <string name="chip_group2">Group</string>
+    <string name="chip_one">One</string>
+    <string name="chip_two">Two</string>
+    <string name="chip_choose_one">Choose One</string>
+    <string name="chip_choice_a">Choice A</string>
+    <string name="chip_choice_b">Choice B</string>
+    <string name="chip_choice_c">Choice C</string>
+    <string name="chip_chip">Chip</string>
+    <string name="chip_group">Group</string>
+    <string name="chip_in">in</string>
+    <string name="chip_single">single</string>
+    <string name="chip_line">line</string>
+    <string name="chip_add">add</string>
+    <string name="chip_a">a</string>
+    <string name="chip_horizontal">horizontal</string>
+    <string name="chip_scroll">scroll</string>
+    <string name="chip_close_icon_listener">Close Icon Listener</string>
+    <string name="button_raised_button">Raised Button</string>
+    <string name="button_unelevated_button">Unelevated Button</string>
+    <string name="button_outlined_button">Outlined Button</string>
+    <string name="button_text_button">Text Button</string>
+    <string name="button_checkbox">Checkbox</string>
+    <string name="button_radio_button">Radio Button</string>
+    <string name="switch_switch">Switch</string>
+    <string name="textinput_filled_box_text_field">Filled Box Text Field</string>
+    <string name="text_text">Text</string>
+    <string name="text_tex2t">Text</string>
+    <string name="hint_outlined_box_text_field">Outlined Box Text Field</string>
+    <string name="tab_tab_1">Tab 1</string>
+    <string name="tab_tab_2">Tab 2</string>
+    <string name="card_card">Card</string>
+    <string name="switch_theme">switchtheme</string>
 </resources>
