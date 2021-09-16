@@ -14,15 +14,13 @@ import coil.api.load
 import com.example.material_kt.R
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-
-
 import kotlinx.android.synthetic.main.main_fragment.*
-import ui.Chips.ChipsFragment
 import ui.MainActivity
+import ui.POD.settings.SettingsFragment
 
 class PictureOfTheDayFragment : Fragment() {
-    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
     private val viewModel: PictureOfTheDayViewModel by lazy {
         ViewModelProviders.of(this).get(PictureOfTheDayViewModel::class.java)
     }
@@ -59,8 +57,7 @@ class PictureOfTheDayFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.app_bar_fav -> toast("Favourite")
-            R.id.app_bar_settings -> activity?.supportFragmentManager?.beginTransaction()
-                ?.add(R.id.container, ChipsFragment())?.addToBackStack(null)?.commit()
+            R.id.app_bar_settings -> activity?.supportFragmentManager?.beginTransaction()?.add(R.id.container, SettingsFragment())?.addToBackStack(null)?.commit()
             android.R.id.home -> {
                 activity?.let {
                     BottomNavigationDrawerFragment().show(it.supportFragmentManager, "tag")
@@ -76,16 +73,22 @@ class PictureOfTheDayFragment : Fragment() {
                 val serverResponseData = data.serverResponseData
                 val url = serverResponseData.url
                 if (url.isNullOrEmpty()) {
+                    //showError("Сообщение, что ссылка пустая")
                     toast("Link is empty")
-                } else image_view.load(url) {
-                    lifecycle(this@PictureOfTheDayFragment)
-                    error(R.drawable.ic_load_error_vector)
-                    placeholder(R.drawable.ic_no_photo_vector)
+                } else {
+                    //showSuccess()
+                    image_view.load(url) {
+                        lifecycle(this@PictureOfTheDayFragment)
+                        error(R.drawable.ic_load_error_vector)
+                        placeholder(R.drawable.ic_no_photo_vector)
+                    }
                 }
             }
             is PictureOfTheDayData.Loading -> {
+                //showLoading()
             }
             is PictureOfTheDayData.Error -> {
+                //showError(data.error.message)
                 toast(data.error.message)
             }
         }

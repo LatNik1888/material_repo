@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="view_width">25</dimen>
+    <dimen name="view_height">1</dimen>
+    <dimen name="view_margin_top">5</dimen>
+    <dimen name="texteview_padding">10</dimen>
+    <dimen name="widget_padding">10</dimen>
+    <dimen name="peekHeight">50</dimen>
+    <dimen name="marginstart">16dp</dimen>
+    <dimen name="button_margin_start">36dp</dimen>
+    <dimen name="button_margin_top">32dp</dimen>
+    <dimen name="chip_margin_top">24dp</dimen>
+    <dimen name="textfield_width">240dp</dimen>
+    <dimen name="materialcard_height">160dp</dimen>
+</resources>
